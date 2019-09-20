@@ -1,0 +1,87 @@
+<html>
+<head>
+  <style>
+@font-face {
+  font-family: 'PublicSans';
+  src:  url('font/PublicSans-SemiBold.woff2') format('woff2'),
+    url('font/PublicSans-SemiBold.woff') format('woff');\
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'PublicSans';
+  src:  url('font/PublicSans-ExtraLight.woff2') format('woff2'),
+    url('font/PublicSans-ExtraLight.woff') format('woff');
+  font-weight: normal;
+}
+* {
+  font-family: "PublicSans", "Helvetica", sans-serif;
+  font-weight: normal;
+}
+#info {
+  margin-top: 150px;
+  width: 300px;
+    padding-right: 50px;
+  float: right;
+}
+h2 {
+  font-size: 16pt;
+  text-align: right;
+  font-weight: bold;
+    padding-bottom: 100px;
+}
+h1 {
+  font-weight: bold;
+  font-size: 16pt;
+  text-align: right;
+}
+.winner {
+  font-weight: bold;
+}
+table {
+  float: right;
+  margin-bottom: 50px;
+}
+div > #scale {
+  float: right;
+  width: 200px;
+}
+div > div {
+  float: right;
+}
+td {
+  text-align: right;
+}
+th{
+  text-align: center;
+}
+#scale > p {
+  width: 100px;
+  display: inline-block;
+}
+p {
+  font-size: 8pt;
+  color: #888888;
+  font-weight: bold;
+}
+svg {
+  width: 80vh;
+  height: 80vh;
+  padding-top: 15vh;
+  padding-left: 5vh;
+}
+#source {
+  text-align: right;
+}
+body {
+  margin: 0; 
+}
+</style>
+<script src='pmap.js'></script>
+</head>
+<body>
+<svg width="500px" height="500px" id="svg"></svg>
+<script>
+let test = new pmap.Map("./florida.geojson", document.getElementById("svg"))
+</script>
+</body>
+</html>

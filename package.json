@@ -1,0 +1,32 @@
+{
+  "name": "pmap",
+  "version": "1.0.0",
+  "description": "Library to generate interactive political maps using D3.js.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx webpack --mode=development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmsparks/d3-framework.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cmsparks/d3-framework/issues"
+  },
+  "homepage": "https://github.com/cmsparks/d3-framework#readme",
+  "devDependencies": {
+    "terser-webpack-plugin": "^2.0.1",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.8"
+  },
+  "dependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "babel-loader": "^8.0.6",
+    "d3": "^5.12.0"
+  }
+}
