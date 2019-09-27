@@ -1,5 +1,14 @@
 <html>
 <head>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+	<meta name="twitter:card" content="player" />
+	<meta name="twitter:site" content="@cmsparks" />
+  <meta name="twitter:title" content="2018 Florida Gubernatorial Election" />
+	<meta name="twitter:description" content="Interactive choropleth map of the 2018 Gubernatorial Election in Florida" />
+  <meta name="twitter:image" content="https://cmsparks.com/projects/polling/image.png" />
+  <meta name="twitter:player" content="https://cmsparks.com/projects/polling/index.html" />
+	<meta name="twitter:player:width" content="1920" />
+	<meta name="twitter:player:height" content="1200" />
   <style>
 @font-face {
   font-family: 'PublicSans';
@@ -18,41 +27,41 @@
   font-weight: normal;
 }
 body {
+  background-color: white;
   display: grid;
   grid-template-areas:
     "map title"
     "map subtitle"
     "map table"
     "map sources";
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 50% 47.5%;
 }
 #info {
-  margin-top: 20vh;
-  width: 25vh;
-    padding-right: 2vh;
+  margin-top: 4vh;
+  width: 50vw;
   float: right;
-}
-h2 {
-  font-size: 2.25vh;
-  text-align: right;
-  font-weight: bold;
-    padding-bottom: 100px;
 }
 h1 {
   font-weight: bold;
-  font-size: 2.25vh;
+  font-size: 6vh;
   text-align: right;
+  margin-right: 4vw;
+  padding-bottom: 1vh;
 }
 .winner {
   font-weight: bold;
 }
 table {
+  font-size: 4.5vh;
+  margin-right: 4vw;
   float: right;
-  margin-bottom: 5vh;
+  margin-bottom: 4vh;
 }
 div > #scale {
   float: right;
-  width: 12.5vw;
+  width: 25vw;
+  margin-right: 4vw;
+  height: 4vh;
 }
 div > div {
   float: right;
@@ -64,22 +73,30 @@ th{
   text-align: center;
 }
 #scale > p {
-  width: 6.25vw;
+  width: 12.5vw;
   display: inline-block;
+    margin-right: 0;
 }
 p {
-  font-size: 1.125vh;
+  font-size: 4vh;
   color: #888888;
   font-weight: bold;
+  text-align: right;
+  margin-top: 4vh;
+  margin-right: 4vw;
 }
 svg {
   width: 80vh;
   height: 80vh;
-  padding-top: 15vh;
+  padding-top: 7.5vh;
   padding-left: 5vh;
 }
 #source {
+  padding-top: 10vh;
   text-align: right;
+}
+#source > p {
+  margin-bottom: 1vh;
 }
 body {
   margin: 0; 

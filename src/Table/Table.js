@@ -46,8 +46,14 @@ export default class Table {
   }
 
   draw() {
+    let loc = ""
+    
+    if (this.locationString !== "Florida") {
+    }
+    console.log(loc)
     let htmlString =  `
     <h1>Florida Gubernatorial Election 2018</h1>
+    <p>${this.locationString}</p>
     <table>
       <tr>
         <th class="winner" style="border-bottom: 2px solid red">Ron DeSantis</th>
@@ -84,6 +90,9 @@ export default class Table {
 
 
   get locationString() {
-    return "Florida"
+    if(this.map.selected.type == "Feature") {
+      return this.map.selected.properties.NAME.charAt(0).toUpperCase()  + this.map.selected.properties.NAME.substr(1).toLowerCase() + " County"
+    }
+    return "Statewide";
   }
 }
