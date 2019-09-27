@@ -5,8 +5,8 @@ export default class Map {
   
   constructor(url, root) {
     this.root = root
-    this.width = 500
-    this.height = 500
+    this.width = Number(root.getAttribute("width"))
+    this.height = Number(root.getAttribute("height"))
     
     this.mapGroup = d3.select(root).append('g')
       .attr("height", this.height)
@@ -29,6 +29,7 @@ export default class Map {
     this.table = null
 
     d3.json(url).then(function(data) {
+
       this.mapData = data 
       this.selected = this.mapData
       this.projection = d3.geoMercator()
@@ -45,7 +46,7 @@ export default class Map {
   }
 
   draw() {
-    let test = this.mapGroup.selectAll("path")
+    this.mapGroup.selectAll("path")
       .data(this.mapData.features)
       .enter().append("path")
         .on("click", this.clicked.bind(this))

@@ -17,21 +17,30 @@
   font-family: "PublicSans", "Helvetica", sans-serif;
   font-weight: normal;
 }
+body {
+  display: grid;
+  grid-template-areas:
+    "map title"
+    "map subtitle"
+    "map table"
+    "map sources";
+  grid-template-columns: 50% 50%;
+}
 #info {
-  margin-top: 150px;
-  width: 300px;
-    padding-right: 50px;
+  margin-top: 20vh;
+  width: 25vh;
+    padding-right: 2vh;
   float: right;
 }
 h2 {
-  font-size: 16pt;
+  font-size: 2.25vh;
   text-align: right;
   font-weight: bold;
     padding-bottom: 100px;
 }
 h1 {
   font-weight: bold;
-  font-size: 16pt;
+  font-size: 2.25vh;
   text-align: right;
 }
 .winner {
@@ -39,11 +48,11 @@ h1 {
 }
 table {
   float: right;
-  margin-bottom: 50px;
+  margin-bottom: 5vh;
 }
 div > #scale {
   float: right;
-  width: 200px;
+  width: 12.5vw;
 }
 div > div {
   float: right;
@@ -55,11 +64,11 @@ th{
   text-align: center;
 }
 #scale > p {
-  width: 100px;
+  width: 6.25vw;
   display: inline-block;
 }
 p {
-  font-size: 8pt;
+  font-size: 1.125vh;
   color: #888888;
   font-weight: bold;
 }
@@ -79,8 +88,14 @@ body {
 <script src='pmap.js'></script>
 </head>
 <body>
-<svg width="500px" height="500px" id="svg"></svg>
 <script>
+width = window.innerWidth; height = window.innerHeight;
+pmap.d3.select("body")
+  .append("svg")
+  .attr("id", "svg")
+  .attr("width", Math.round(width/2))
+  .attr("height", Math.round(width/2))
+
 let test = new pmap.Map("./florida.geojson", document.getElementById("svg"))
 </script>
 </body>

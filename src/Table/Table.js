@@ -47,8 +47,7 @@ export default class Table {
 
   draw() {
     let htmlString =  `
-    <h1>Gubernatorial Election 2018</h1>
-    <h2>${this.locationString}</h2>
+    <h1>Florida Gubernatorial Election 2018</h1>
     <table>
       <tr>
         <th class="winner" style="border-bottom: 2px solid red">Ron DeSantis</th>
@@ -65,7 +64,7 @@ export default class Table {
     </table>
 
     <div id="scale">
-      <div style="width:100%; height:30px; background: linear-gradient(90deg, #FF0000 0%, #FFFFFF 51.94%, #0404FF 100%);"></div>
+      <div style="width:100%; height:80%; background: linear-gradient(90deg, #FF0000 0%, #FFFFFF 51.94%, #0404FF 100%);"></div>
       <p align="left" style="float:left">+20 Rep</p><p align="right">+20 Dem</p>
     </div>
 
