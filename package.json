@@ -21,7 +21,7 @@
   "devDependencies": {
     "terser-webpack-plugin": "^2.0.1",
     "webpack": "^4.40.2",
-    "webpack-cli": "^3.3.8"
+    "webpack-cli": "^3.3.12"
   },
   "dependencies": {
     "@babel/core": "^7.6.0",
